@@ -31,6 +31,10 @@
 
 }
 
+.moreText{
+    display: none;
+}
+
 button #more {
 
 }
@@ -39,28 +43,4 @@ button #solved{
 
 }
 
-#more-container{
-
-}
-
-.more-template{
-
-}
-                    
-.more{
-
-}
-                        
-.more-heading{
-
-}
-
-.more-text{
-
-}
-                          
-button #close-more{
-
-
-}
                     

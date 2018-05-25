@@ -36,13 +36,25 @@ function show(requests){
     requests.forEach(request=>{
         console.log(request)
 
-        // CLONE TEMPLATE
+// CLONE TEMPLATE
 
         let clone = caseTemplate.cloneNode(true);
 
         // show Message (heading)
 
         clone.querySelector('.message').textContent=`${request.message}`;
+
+    //  MORE (is hidden in CSS)
+
+    clone.querySelector('.moreText').textContent=`${request.full}`;
+
+   console.log("test")
+   
+
+
+    // REVEAL More
+
+ 
 
         
         // show date
@@ -56,7 +68,7 @@ function show(requests){
 
 
 
-        // show different Importance COLORS:  IMPORTANCE (GREEN:#<40 YELLOW:# 41-70 RED:#71) 
+// show different Importance COLORS:  IMPORTANCE (GREEN:#<40 YELLOW:# 41-70 RED:#71) 
 
         //Grab the importance number:
         console.log(request.importance);
@@ -75,9 +87,14 @@ function show(requests){
 
         };
         
-        
+        //GIVES ERROR
+// clone.querySelector("#more").addEventlistener("click",function(showText){
+// console.log("Clicked more ");
+// console.log(showText);
+// });
 
-        // show NAME (first middle last)
+
+// show NAME (first middle last)
        
         if(request.middle){
             //console.log("has middle", request.middle)
@@ -87,13 +104,14 @@ function show(requests){
             clone.querySelector('.name').textContent=`${request.first} ${request.last}`;
         }
         
-        // PASTE (show) TEMPLATE in html (append)
+      
+// PASTE (show) TEMPLATE in html (append)
         document.querySelector("#request-container").appendChild(clone)
     });
 
     // BTN1 show more text (show more = json: full)
 
-    clone.querySelector(".moreText")
+   
 }
 
 
