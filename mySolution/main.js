@@ -48,8 +48,6 @@ function show(requests){
 
     clone.querySelector('.moreText').textContent=`${request.full}`;
 
-   console.log("test")
-   
 
 
     // REVEAL More
